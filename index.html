@@ -1,1 +1,178 @@
-__INDEX__
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeBlocks — Own your day. Block by block.</title>
+  <meta name="description" content="TimeBlocks is a focused Windows time-blocking timer. Plan your day in blocks, focus on one at a time, and see where your time really went.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TimeBlocks home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="brand-name">TimeBlocks</span>
+    </a>
+    <nav class="site-nav" aria-label="Page">
+      <a href="#how">How it works</a>
+      <a href="#report">Daily report</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#download">Download for Windows</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <p class="chip">Windows 10 &amp; 11 &middot; Free</p>
+      <h1>Own your day.<br>Block by block.</h1>
+      <p class="lede">TimeBlocks is a small Windows timer that turns your day into clear blocks of work. Plan the day in the morning, focus on one block at a time, and finish knowing exactly where your hours went.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#download">Download for Windows &mdash; Free</a>
+        <a class="btn btn-lg" href="#how">See how it works</a>
+      </div>
+      <p class="proof">No account. No cloud. Your data stays on your PC.</p>
+
+      <!-- App mockup, built in the widget's own visual language -->
+      <div class="mockup" role="img" aria-label="Preview of the TimeBlocks widget showing a daily timeline and focus timer">
+        <div class="mockup-titlebar">
+          <span class="mockup-brand">TimeBlocks</span>
+          <span class="mockup-date">Today, Thu Oct 8</span>
+          <span class="mockup-controls" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-timeline">
+            <p class="mockup-label">Daily timeline</p>
+            <ul>
+              <li><span class="t">08:00</span><span class="n">Deep Work</span><span class="d">90m</span></li>
+              <li><span class="t">09:45</span><span class="n">Break</span><span class="d">10m</span></li>
+              <li class="active"><span class="t">10:00</span><span class="n">Writing</span><span class="d">60m</span></li>
+              <li><span class="t">11:15</span><span class="n">Meetings</span><span class="d">30m</span></li>
+              <li><span class="t">12:00</span><span class="n">Lunch</span><span class="d">45m</span></li>
+            </ul>
+            <p class="mockup-meta">3 / 5 blocks completed today</p>
+          </div>
+          <div class="mockup-timer">
+            <p class="mockup-label">Focus timer</p>
+            <p class="mockup-clock">24:13</p>
+            <p class="mockup-meta">Session: Writing</p>
+            <div class="mockup-bar"><span style="width:50%"></span></div>
+            <p class="mockup-meta">50% complete</p>
+            <div class="mockup-actions">
+              <span class="btn btn-sm">Pause</span>
+              <span class="btn btn-sm">Reset</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how">
+      <p class="section-label">How it works</p>
+      <h2>Three steps. No learning curve.</h2>
+      <div class="cards">
+        <div class="card">
+          <p class="card-num">01</p>
+          <h3>Name your blocks</h3>
+          <p>In the morning, split your day into named chunks &mdash; &ldquo;Deep Work&rdquo;, &ldquo;Emails&rdquo;, &ldquo;Gym&rdquo;. Give each a length. That&rsquo;s the whole plan.</p>
+        </div>
+        <div class="card">
+          <p class="card-num">02</p>
+          <h3>Focus on one</h3>
+          <p>Start the timer on the current block and do only that until it rings. Short Pomodoro-style sprints keep it sustainable.</p>
+        </div>
+        <div class="card">
+          <p class="card-num">03</p>
+          <h3>See the truth</h3>
+          <p>At day&rsquo;s end, TimeBlocks shows planned vs. actual for every block. You&rsquo;ll see exactly where the day really went.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLAIN-WORDS EXPLAINER ============ -->
+    <section class="section">
+      <p class="section-label">The method, in plain words</p>
+      <h2>Two simple ideas that work.</h2>
+      <div class="cards cards-2">
+        <div class="card">
+          <h3>Time blocking</h3>
+          <p>Instead of a to-do list that never ends, you assign every hour a job. When 10:00 says &ldquo;Writing&rdquo;, you write. Decisions are made once, in the morning &mdash; not fifty times during the day.</p>
+        </div>
+        <div class="card">
+          <h3>Pomodoro</h3>
+          <p>Work in short, timed sprints &mdash; usually 25 minutes &mdash; then take a real break. A ticking timer makes starting easy, and breaks keep your brain sharp for the next sprint.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DAILY REPORT ============ -->
+    <section class="section" id="report">
+      <p class="section-label">Daily report</p>
+      <h2>Planned vs. actual, every evening.</h2>
+      <p class="section-lede">TimeBlocks logs what you planned against what you actually did &mdash; per block, per day. Over weeks, the pattern is undeniable: you&rsquo;ll spot the hours that quietly disappear.</p>
+      <div class="report-table-wrap">
+        <table class="report-table">
+          <thead>
+            <tr><th>Block</th><th>Planned</th><th>Actual</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Deep Work</td><td>90m</td><td>82m</td></tr>
+            <tr><td>Writing</td><td>60m</td><td>64m</td></tr>
+            <tr><td>Meetings</td><td>30m</td><td>47m</td></tr>
+            <tr><td>Emails</td><td>30m</td><td>18m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <p class="section-label">FAQ</p>
+      <h2>Short answers.</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Is it really free?</h3>
+          <p>Yes. Download it, use it. No account, no trial clock, no locked features.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Where does my data go?</h3>
+          <p>Nowhere. Everything is stored on your own PC &mdash; there is no cloud, no account, nothing to sign into.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which Windows versions?</h3>
+          <p>Windows 10 and Windows 11. macOS and Linux are not supported right now.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to know time blocking already?</h3>
+          <p>No. If you can name a task and pick a duration, you already know enough.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOWNLOAD ============ -->
+    <section class="section download" id="download">
+      <p class="section-label">Get TimeBlocks</p>
+      <h2>Start tomorrow with a plan.</h2>
+      <p class="section-lede">Free for Windows 10 &amp; 11. Set up in under a minute.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#">Download for Windows &mdash; Free</a>
+      </div>
+      <p class="proof">No account required &middot; Works offline</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 SoupApps &middot; TimeBlocks for Windows</p>
+    <p><a href="mailto:soupapps.support@gmail.com">soupapps.support@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

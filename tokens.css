@@ -1,1 +1,45 @@
-__TOKENS__
+/* TimeBlocks design tokens — mirrors DESIGN.md (same system as the desktop widget).
+   Black and white only. 1px borders. Square corners. */
+
+:root {
+  /* ---------- color ---------- */
+  --bg: #121212;            /* page background */
+  --surface: #1c1c1c;       /* buttons, inputs */
+  --text: #f4f4f4;          /* primary text */
+  --muted: #c6c6c6;         /* muted text */
+  --secondary: #b5b5b5;      /* secondary text */
+  --placeholder: #9a9a9a;   /* placeholder text */
+  --quiet: #7a7a7a;         /* quiet / inactive chip text */
+  --disabled: #8a8a8a;      /* disabled text */
+  --ink: #121212;           /* text on a light fill */
+  --ink-muted: #4a4a4a;     /* muted text on a light fill */
+  --hairline: #3a3a3a;      /* hairline border, tables, cards */
+  --input-border: #5a5a5a;  /* input border, disabled dashed border */
+  --strong: #f4f4f4;        /* strong border (buttons) */
+  --chip: #6a6a6a;          /* dotted chip border */
+  --chip-hover: #9a9a9a;    /* dotted chip border, hover */
+
+  /* ---------- type ---------- */
+  --font-ui: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+
+  --text-base: 14px;
+  --text-section-label: 13px;
+  --text-secondary: 12px;
+  --leading: 1.35;
+
+  /* ---------- shape ---------- */
+  --radius: 0;
+  --border: 1px;
+
+  /* ---------- space (steps) ---------- */
+  --s4: 4px;
+  --s6: 6px;
+  --s8: 8px;
+  --s10: 10px;
+  --s12: 12px;
+  --s16: 16px;
+  --section-gap: 30px;
+
+  color-scheme: dark;
+}
