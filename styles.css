@@ -22,15 +22,20 @@ a { color: inherit; }
 /* ---------- header ---------- */
 
 .site-header {
-  display: flex;
-  align-items: center;
-  gap: var(--s16);
-  padding: var(--s10) var(--s16);
   border-bottom: var(--border) solid var(--hairline);
   position: sticky;
   top: 0;
   background: var(--bg);
   z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--s16);
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--s10) var(--s16);
 }
 
 .brand {
@@ -435,14 +440,31 @@ main {
 .site-footer {
   border-top: var(--border) solid var(--hairline);
   padding: var(--s16);
+  max-width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--s8);
-  max-width: 1080px;
-  margin: 0 auto;
   font-size: var(--text-secondary);
   color: var(--quiet);
+}
+
+.giant-word {
+  margin: 64px 0 var(--s8);
+  font-size: clamp(72px, 14vw, 200px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--text);
+  opacity: 0.08;
+  user-select: none;
 }
 
 .site-footer a { color: var(--muted); }
