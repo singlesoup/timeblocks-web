@@ -45,6 +45,10 @@ A Pomodoro app times a session and forgets the plan. A calendar answers what is 
 
 It will not drive shared accountability, project status, deep work analytics, or a schedule that protects hours on a calendar. Planned minutes and the Pomodoro length are separate. A 90 minute block is several 30+5 cycles, and only focus seconds count toward the plan.
 
+## Design
+
+See [DESIGN.md](DESIGN.md). UI text is Inter, then Segoe UI. The clock and minute figures are IBM Plex Mono.
+
 ## Landing page
 
 A stranger has to understand the widget in the first minute: add a block, press Start, and see actual minutes appear next to the plan.
