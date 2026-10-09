@@ -435,6 +435,25 @@ main {
 
 .download .cta-row { margin-top: var(--s16); }
 
+.download h3 {
+  margin-top: var(--s16);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.download-steps {
+  margin: var(--s16) 0 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+  display: grid;
+  gap: var(--s8);
+}
+
+.download-steps strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
