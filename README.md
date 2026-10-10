@@ -1,4 +1,8 @@
 [![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
+<!-- Microsoft Store badge: not linked on purpose, there is no listing URL yet.
+     When the Store listing is live, wrap this image in a link to it:
+     [![...](https://img.shields.io/badge/Microsoft%20Store-...)](STORE_URL) -->
+![Microsoft Store — coming soon](https://img.shields.io/badge/Microsoft%20Store-coming%20soon-5E5E5E?style=flat-square&logo=microsoft&logoColor=white)
 [![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
 [![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
 [![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
