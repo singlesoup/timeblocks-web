@@ -510,6 +510,70 @@ main {
 
 .site-footer a { color: var(--muted); }
 
+/* ---------- privacy policy ---------- */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px var(--s16) 80px;
+}
+
+.legal h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: var(--s12);
+}
+
+.legal h2 {
+  margin: 30px 0 var(--s8);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.legal h3 {
+  margin: var(--s16) 0 var(--s8);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.legal p,
+.legal li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.legal p + p,
+.legal ul {
+  margin-top: var(--s12);
+}
+
+.legal ul {
+  margin-bottom: 0;
+  padding-left: 1.2em;
+}
+
+.legal li + li {
+  margin-top: var(--s8);
+}
+
+.legal a {
+  color: var(--text);
+}
+
+.legal-meta {
+  color: var(--secondary);
+  margin-bottom: var(--s16);
+}
+
+.legal .mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {

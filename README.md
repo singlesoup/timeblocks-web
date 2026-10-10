@@ -73,3 +73,5 @@ See [DESIGN.md](DESIGN.md). UI text is Inter, then Segoe UI. The clock and minut
 ## Support
 
 [soupapps.support@gmail.com](mailto:soupapps.support@gmail.com)
+
+[Privacy policy](privacy.html)
