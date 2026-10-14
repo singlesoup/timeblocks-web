@@ -1,8 +1,5 @@
 [![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
-<!-- Microsoft Store badge: not linked on purpose, there is no listing URL yet.
-     When the Store listing is live, wrap this image in a link to it:
-     [![...](https://img.shields.io/badge/Microsoft%20Store-...)](STORE_URL) -->
-![Microsoft Store — coming soon](https://img.shields.io/badge/Microsoft%20Store-coming%20soon-5E5E5E?style=flat-square&logo=microsoft&logoColor=white)
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-get%20it-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)
 [![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
 [![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
 [![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
@@ -17,7 +14,7 @@
 
 A small always-on-top Windows widget that turns your day into named blocks of minutes. Plan in the morning, run a focus timer on one block at a time, and see whether the day matched the plan.
 
-**[Website](https://singlesoup.github.io/timeblocks-web/)** | **[Download TimeBlocks-Setup.exe](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)** | **[Releases](https://github.com/singlesoup/timeblocks-web/releases)** | **[Design system](DESIGN.md)**
+**[Website](https://timeblocks-web.vercel.app/)** | **[Microsoft Store](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)** | **[Download TimeBlocks-Setup.exe](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)** | **[Releases](https://github.com/singlesoup/timeblocks-web/releases)** | **[Design system](DESIGN.md)**
 
 Windows 10 & 11 · Free · No account · Data stays on your PC
 
@@ -55,7 +52,7 @@ A Pomodoro app times a session and forgets the plan. A calendar answers what is 
 
 ## Install
 
-1. Download [**TimeBlocks-Setup.exe**](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe) from the [public releases page](https://github.com/singlesoup/timeblocks-web/releases/latest).
+1. Install from the [Microsoft Store](https://apps.microsoft.com/detail/9PFRD4P2ZHWS), or download [**TimeBlocks-Setup.exe**](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe) from the [public releases page](https://github.com/singlesoup/timeblocks-web/releases/latest).
 2. Open it. The wizard is titled **Setup - TimeBlocks**. It installs for your Windows user and does not ask you to pick a folder.
 3. If Windows says it protected your PC, choose **More info**, then **Run anyway**. The installer is not code-signed yet.
 4. Leave **Pin TimeBlocks to the taskbar** checked if you want it one click away, then finish. Setup opens TimeBlocks.

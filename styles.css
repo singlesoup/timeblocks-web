@@ -115,20 +115,6 @@ a { color: inherit; }
 
 .btn-sm { padding: var(--s4) var(--s10); }
 
-/* Microsoft Store badge. Disabled until a live listing URL exists — no href,
-   so there is nothing to 404. See DESIGN.md controls: dark fill, disabled
-   text, dashed border. To enable: make it an <a href="STORE_URL"> and drop
-   the aria-disabled attribute and this block. */
-.store-badge[aria-disabled="true"] {
-  background: var(--surface);
-  color: var(--disabled);
-  border-style: dashed;
-  border-color: var(--input-border);
-  cursor: default;
-  pointer-events: none;
-  user-select: none;
-}
-
 .btn-lg {
   padding: var(--s12) var(--s16);
   font-size: 15px;
