@@ -563,7 +563,8 @@ main {
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
-  .site-nav { display: none; }
+  .site-nav,
+  .header-actions { display: none; }
   .cards, .cards-2, .faq { grid-template-columns: 1fr; }
   .mockup-body { grid-template-columns: 1fr; }
   .mockup-timeline { border-right: none; border-bottom: var(--border) solid var(--hairline); }
