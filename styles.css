@@ -560,6 +560,35 @@ main {
   color: var(--text);
 }
 
+/* ---------- changelog ---------- */
+
+.legal .release {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: var(--border) solid var(--hairline);
+}
+
+.legal .release:first-of-type {
+  margin-top: var(--s16);
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal .release h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s8) var(--s12);
+  margin-top: 0;
+}
+
+.legal .release-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary);
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
