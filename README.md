@@ -12,7 +12,7 @@
 
 **Own your day. Block by block.**
 
-A small always-on-top Windows widget that turns your day into named blocks of minutes. Plan in the morning, run a focus timer on one block at a time, and see whether the day matched the plan.
+A small always-on-top Windows widget that turns your day into planned blocks of time. Plan in the morning or a day before, run a focus timer on one block at a time, and see whether the day matched the plan.
 
 **<a href="https://timeblocks-web.vercel.app/">Website</a>** | **<a href="https://apps.microsoft.com/detail/9PFRD4P2ZHWS">Microsoft Store</a>** | **<a href="https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe">Download TimeBlocks-Setup.exe</a>**
 
@@ -22,41 +22,48 @@ Windows 10 &amp; 11 · Free · No account · Data stays on your PC
 
 ---
 
-## What it is
+## What is TimeBlocks
 
 <div align="center">
-
   <img src="assets/demo.gif" alt="TimeBlocks Demo" width="720">
-
 </div>
 
-A block is a name plus planned minutes. **Start** runs a focus segment (25+5, 30+5, or 60+10). When focus ends, the break starts on its own and both are written to the log. The daily report sums focus minutes for the day and shows planned vs actual.
+<p align="center"><em>TimeBlocks answers one question: where did my time actually went?</em></p>
 
-The shipped loop is named blocks and minutes, not a clock schedule. Planned minutes and the Pomodoro length are separate: a 90 minute block is several 30+5 cycles, and only focus seconds count toward the block's actual minutes.
+### Core capabilities:
 
-Three views:
+- **Plan your day in named time blocks** : Deep Work, Emails, Study — each with its own duration
+- **One-click focus timer** — 25+5, 30+5, or 60+10 presets; the break starts on its own.
+- **Planned vs actual scorecard** — per task, the difference, breaks counted separately.
+- **Plan tomorrow tonight** — tomorrow's list is already waiting in the morning.
+- **Always-visible widget** — *compact floating timer*, resizable, hides to the tray.
+- **Daily reminders** nudge you to plan tomorrow before the day begins
+- **Session log** and remarks capture how each day went, not just what you did
+- **No account, no cloud, no tracking** — your data never leaves your PC
 
-- **Compact** &mdash; a clock.
-- **Day** &mdash; today's blocks, a remark, the session log, and the planned-versus-actual table.
-- **Plan** &mdash; tomorrow's blocks, a tray reminder, and past daily reports.
+Free forever. No account, no cloud, no tracking. Everything stays on your PC. Windows 10 & 11.
 
-A small always-on-top window. It hides to the tray and keeps a single instance.
+## How it works
 
-## The day
+- Plan — name the blocks of your day (Deep Work, Emails) and give each a duration. 
+- Focus — run the timer on one block at a time, with automatic Pomodoro-style breaks. 
+- Review — the planned-vs-actual report shows what you planned against what you actually did, block by block
 
-- **Tonight:** name tomorrow's blocks and how many minutes each deserves.
-- **Tomorrow:** the list is already today's list. Start, focus, break, repeat.
-- **End of day:** planned work, actual focus, the difference, breaks, and a short remark. Past days stay as reports.
+The timer writes down what actually happened, right next to what you planned. Focusing *is* the logging — there's no second step.
 
-## Who it is for
+## Who it's for
 
-Someone who installs TimeBlocks on their own Windows PC and leaves the widget on the desktop or in the tray. They work alone at a desk. Their day is a short list of named blocks they assign minutes to.
+Anyone who works alone at a Windows PC — especially ADHD brains, Freelancers, Students.
 
-**Not a fit:** teams, a manager looking at someone else's day, billable hours, people whose day is meetings, or anyone who needs the same plan on a phone or a second computer.
+Distractibility, time blindness, and trouble starting aren't willpower failures. They're neurological patterns that need a different kind of structure: the next task already named, the timer always visible, breaks that start themselves, and immediate feedback at the end of the day. That's what **TimeBlocks** is.
+
+**Not a fit**: teams, managers watching someone else's day, billable hours, or anyone who needs the same plan on a phone.
 
 ## How TimeBlocks is different
 
-A Pomodoro app times a session and forgets the plan. A calendar answers what is at 2pm. A todo app answers whether it is done. A time tracker answers where the hours went after the fact. TimeBlocks answers whether the day matched the plan while you were doing it.
+- A Pomodoro app times a session and forgets the plan. **TimeBlocks** keeps the plan and checks the day against it.
+- A todo app tells you whether something is done. TimeBlocks tells you whether it got its time tracked.
+- A time tracker explains where the hours went — after the fact, and only if you log them. TimeBlocks writes the actuals while you focus.
 
 ## Install
 
@@ -69,14 +76,13 @@ A Pomodoro app times a session and forgets the plan. A calendar answers what is 
 
 ## This repo
 
-The landing page for TimeBlocks: `index.html`, `styles.css`, and `tokens.css`. The desktop app itself is a separate, private repository.
+Plain HTML and CSS. No build step, no framework: 
+- `index.html` — page structure and copy
+- `tokens.css` — design tokens (colors, type, spacing)
+- `styles.css` — everything else
 
-## Design
-
-See [DESIGN.md](DESIGN.md). UI text is Inter, then Segoe UI. The clock and minute figures are IBM Plex Mono.
+The design system is strictly monochrome: near-black background, off-white text, hairline borders, square corners. If it isn't black, white, or gray, it doesn't go on the page.
 
 ## Support
 
 [soupapps.support@gmail.com](mailto:soupapps.support@gmail.com)
-
-[Changelog](changelog.html) · [Privacy policy](privacy.html)
