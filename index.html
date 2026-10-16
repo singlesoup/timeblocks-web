@@ -45,7 +45,6 @@
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" href="https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe">Download for Windows &mdash; Free</a>
         <a class="btn btn-lg" href="https://apps.microsoft.com/detail/9PFRD4P2ZHWS">Get it from Microsoft Store</a>
-        <a class="btn btn-lg" href="#how">See how it works</a>
       </div>
       <p class="proof">No account. No cloud. Your data stays on your PC.</p>
 
@@ -58,8 +57,13 @@
           playsinline
           preload="none"
         ></video>
-        <span class="demo-cursor" hidden>
-          <button type="button" class="demo-play" aria-label="Play demo video">Play video</button>
+        <span class="demo-cursor">
+          <button type="button" class="demo-play" aria-label="Play demo video">
+            <svg class="demo-play-icon" width="12" height="14" viewBox="0 0 12 14" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0v14l12-7z"/>
+            </svg>
+            Play video
+          </button>
         </span>
       </div>
     </section>
@@ -101,14 +105,8 @@
           <p>Work in short, timed sprints &mdash; usually 25 minutes &mdash; then take a real break. A ticking timer makes starting easy, and breaks keep your brain sharp for the next sprint.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ============ PRODUCT PREVIEW (mockup moved from hero) ============ -->
-    <section class="section" id="preview">
-      <p class="section-label">The widget</p>
-      <h2>See it on the desktop.</h2>
-      <p class="section-lede">The floating timer, today&rsquo;s blocks, and the focus clock &mdash; the same black-and-white language as the app.</p>
-
+      <!-- App mockup, built in the widget's own visual language -->
       <div class="mockup" role="img" aria-label="Preview of the TimeBlocks widget showing a daily timeline and focus timer">
         <div class="mockup-titlebar">
           <span class="mockup-brand">TimeBlocks</span>

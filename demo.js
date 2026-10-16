@@ -1,8 +1,13 @@
 /* TimeBlocks hero demo video — plain browser JS, no frameworks.
-   Woblo-style cursor-follow "Play video" control:
-   the chip is anchored at the stage center and offset by
-   --dx / --dy = pointer position − stage center (CSS pixels).
-   Cursor-follow only for fine pointers; reduced motion keeps it centered. */
+   Play chip behavior (updated spec):
+   - Idle / pointer outside the frame: chip is visible and centered (--dx / --dy = 0).
+   - Fine pointer inside the frame (not playing): chip follows via
+     --dx / --dy = pointer − stage center (CSS pixels).
+   - Pointer leaves the frame: --dx / --dy return to 0 so the chip
+     snaps back to center (CSS transition animates it).
+   - Playing: chip hides (CSS .is-playing). Pause / ended restores the centered chip.
+   Follow is fine-pointer only; reduced motion keeps it centered always;
+   touch taps the stage to play. */
 
 (function () {
   'use strict';
@@ -19,28 +24,33 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   var playing = false;
-  var inside = false;
 
   function markPlaying() {
     playing = true;
     demo.classList.add('is-playing');
-    cursor.hidden = true;
     video.controls = true;
   }
 
   function markIdle() {
     playing = false;
     demo.classList.remove('is-playing');
+    demo.classList.remove('is-tracking');
     video.controls = false;
-    // Restore the chip if the pointer is over the stage
-    // (reduced motion keeps it centered; --dx/--dy stay 0).
-    cursor.hidden = !(inside && finePointer.matches && !reduceMotion.matches);
+    // Chip is visible again, centered (--dx/--dy = 0); a pointer still
+    // inside the frame re-follows on the next pointermove.
+    demo.style.setProperty('--dx', '0px');
+    demo.style.setProperty('--dy', '0px');
   }
 
   function setOffset(e) {
     var rect = demo.getBoundingClientRect();
     demo.style.setProperty('--dx', (e.clientX - rect.left - rect.width / 2) + 'px');
     demo.style.setProperty('--dy', (e.clientY - rect.top - rect.height / 2) + 'px');
+  }
+
+  function resetToCenter() {
+    demo.style.setProperty('--dx', '0px');
+    demo.style.setProperty('--dy', '0px');
   }
 
   function requestPlay() {
@@ -62,30 +72,23 @@
 
   demo.addEventListener('pointerenter', function (e) {
     if (!finePointer.matches || !isFine(e)) return;
-    inside = true;
-    if (playing || reduceMotion.matches) return;
-    setOffset(e);
-    cursor.hidden = false;
+    if (playing) return;
+    demo.classList.add('is-tracking');
+    if (!reduceMotion.matches) setOffset(e);
   });
 
   demo.addEventListener('pointermove', function (e) {
     if (!finePointer.matches || !isFine(e)) return;
-    inside = true;
     if (playing) return;
     if (!reduceMotion.matches) setOffset(e);
-    cursor.hidden = playing || reduceMotion.matches;
   });
 
   demo.addEventListener('pointerleave', function (e) {
     if (!isFine(e) && e.pointerType !== 'touch') return;
-    inside = false;
-    cursor.hidden = true;
-  });
-
-  // Keyboard users: show the centered chip when focus lands on the button
-  play.addEventListener('focus', function () {
     if (playing) return;
-    cursor.hidden = false;
+    demo.classList.remove('is-tracking');
+    if (!reduceMotion.matches) resetToCenter();
+    // Chip stays visible, centered.
   });
 
   // --- start playback ---
@@ -95,14 +98,14 @@
     requestPlay();
   });
 
-  // Touch / coarse pointer: tap the stage or poster to play; no follower.
+  // Touch / coarse pointer: tap the stage or poster to play; no follow.
   demo.addEventListener('click', function (e) {
     if (finePointer.matches) return;
     var target = e.target;
     if (target === demo || target === video) requestPlay();
   });
 
-  // --- pause / end restore the idle state ---
+  // --- pause / end restore the centered idle state ---
 
   video.addEventListener('pause', function () {
     if (!video.ended && playing) markIdle();

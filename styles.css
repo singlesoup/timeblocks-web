@@ -239,9 +239,16 @@ main {
   transform: translate(-50%, -50%) translate(var(--dx, 0px), var(--dy, 0px));
   pointer-events: auto;
   will-change: transform;
+  /* Smooth snap back to center on leave; disabled while actively tracking */
+  transition: transform 0.18s ease-out;
 }
 
+.demo.is-tracking .demo-cursor { transition: none; }
+
 .demo-play {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
   font: inherit;
   font-weight: 500;
   padding: var(--s10) var(--s16);
@@ -250,6 +257,11 @@ main {
   border: var(--border) solid var(--strong);
   border-radius: var(--radius);
   cursor: pointer;
+}
+
+.demo-play .demo-play-icon {
+  display: block;
+  flex: none;
 }
 
 .demo-play:hover {
@@ -277,10 +289,14 @@ main {
   .demo-cursor {
     transform: translate(-50%, -50%);
     will-change: auto;
+    transition: none;
   }
 }
 
 /* ---------- app mockup (widget visual language) ---------- */
+
+/* Extra room when the mockup sits under the Method cards */
+.cards + .mockup { margin-top: var(--section-gap); }
 
 .mockup {
   border: var(--border) solid var(--strong);
