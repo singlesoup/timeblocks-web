@@ -49,37 +49,18 @@
       </div>
       <p class="proof">No account. No cloud. Your data stays on your PC.</p>
 
-      <!-- App mockup, built in the widget's own visual language -->
-      <div class="mockup" role="img" aria-label="Preview of the TimeBlocks widget showing a daily timeline and focus timer">
-        <div class="mockup-titlebar">
-          <span class="mockup-brand">TimeBlocks</span>
-          <span class="mockup-date">Today, Thu Oct 8</span>
-          <span class="mockup-controls" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <div class="mockup-body">
-          <div class="mockup-timeline">
-            <p class="mockup-label">Daily timeline</p>
-            <ul>
-              <li><span class="t">08:00</span><span class="n">Deep Work</span><span class="d">90m</span></li>
-              <li><span class="t">09:45</span><span class="n">Break</span><span class="d">10m</span></li>
-              <li class="active"><span class="t">10:00</span><span class="n">Writing</span><span class="d">60m</span></li>
-              <li><span class="t">11:15</span><span class="n">Meetings</span><span class="d">30m</span></li>
-              <li><span class="t">12:00</span><span class="n">Lunch</span><span class="d">45m</span></li>
-            </ul>
-            <p class="mockup-meta">3 / 5 blocks completed today</p>
-          </div>
-          <div class="mockup-timer">
-            <p class="mockup-label">Focus timer</p>
-            <p class="mockup-clock">24:13</p>
-            <p class="mockup-meta">Session: Writing</p>
-            <div class="mockup-bar"><span style="width:50%"></span></div>
-            <p class="mockup-meta">50% complete</p>
-            <div class="mockup-actions">
-              <span class="btn btn-sm">Pause</span>
-              <span class="btn btn-sm">Reset</span>
-            </div>
-          </div>
-        </div>
+      <!-- Hero demo video (Woblo-style cursor-follow play control) -->
+      <div class="demo" data-demo>
+        <video
+          class="demo-video"
+          src="assets/demo.mp4"
+          poster="assets/demo-poster.jpg"
+          playsinline
+          preload="none"
+        ></video>
+        <span class="demo-cursor" hidden>
+          <button type="button" class="demo-play" aria-label="Play demo video">Play video</button>
+        </span>
       </div>
     </section>
 
@@ -118,6 +99,45 @@
         <div class="card">
           <h3>Pomodoro</h3>
           <p>Work in short, timed sprints &mdash; usually 25 minutes &mdash; then take a real break. A ticking timer makes starting easy, and breaks keep your brain sharp for the next sprint.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT PREVIEW (mockup moved from hero) ============ -->
+    <section class="section" id="preview">
+      <p class="section-label">The widget</p>
+      <h2>See it on the desktop.</h2>
+      <p class="section-lede">The floating timer, today&rsquo;s blocks, and the focus clock &mdash; the same black-and-white language as the app.</p>
+
+      <div class="mockup" role="img" aria-label="Preview of the TimeBlocks widget showing a daily timeline and focus timer">
+        <div class="mockup-titlebar">
+          <span class="mockup-brand">TimeBlocks</span>
+          <span class="mockup-date">Today, Thu Oct 8</span>
+          <span class="mockup-controls" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-timeline">
+            <p class="mockup-label">Daily timeline</p>
+            <ul>
+              <li><span class="t">08:00</span><span class="n">Deep Work</span><span class="d">90m</span></li>
+              <li><span class="t">09:45</span><span class="n">Break</span><span class="d">10m</span></li>
+              <li class="active"><span class="t">10:00</span><span class="n">Writing</span><span class="d">60m</span></li>
+              <li><span class="t">11:15</span><span class="n">Meetings</span><span class="d">30m</span></li>
+              <li><span class="t">12:00</span><span class="n">Lunch</span><span class="d">45m</span></li>
+            </ul>
+            <p class="mockup-meta">3 / 5 blocks completed today</p>
+          </div>
+          <div class="mockup-timer">
+            <p class="mockup-label">Focus timer</p>
+            <p class="mockup-clock">24:13</p>
+            <p class="mockup-meta">Session: Writing</p>
+            <div class="mockup-bar"><span style="width:50%"></span></div>
+            <p class="mockup-meta">50% complete</p>
+            <div class="mockup-actions">
+              <span class="btn btn-sm">Pause</span>
+              <span class="btn btn-sm">Reset</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -198,5 +218,6 @@
     <p class="giant-word" aria-hidden="true">TimeBlocks</p>
   </footer>
 
+  <script src="demo.js" defer></script>
 </body>
 </html>
