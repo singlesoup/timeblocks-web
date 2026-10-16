@@ -1,8 +1,10 @@
-[![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
-[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-get%20it-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)
-[![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest)
-[![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
-[![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+<p align="center">
+  [![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
+  [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-get%20it-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)
+  [![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+  [![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+  [![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+</p>
 
 <p align="center">
   <img src="assets/timeblocks-icon.png" alt="TimeBlocks" width="160">
@@ -23,7 +25,12 @@
 ## What it is
 
 <p align="center">
-  <video src="assets/demo.mp4" controls width="720" poster="assets/timeblocks-icon.png">Your browser does not support the video tag. <a href="assets/demo.mp4">Download demo</a></video>
+  <!-- GitHub often sanitizes or doesn't autoplay video tags in READMEs; link the demo instead so users can open it. -->
+  <a href="assets/demo.mp4">
+    <img src="assets/timeblocks-icon.png" alt="Demo — click to play" width="720">
+  </a>
+  <br>
+  <em>Click the image to open or download the demo video.</em>
 </p>
 
 A block is a name plus planned minutes. **Start** runs a focus segment (25+5, 30+5, or 60+10). When focus ends, the break starts on its own and both are written to the log. The daily report sums focus minutes for the day and shows planned vs actual.
