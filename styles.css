@@ -208,7 +208,95 @@ main {
   margin-bottom: 64px;
 }
 
+/* ---------- hero demo video (cursor-follow play control) ---------- */
+
+.demo {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: var(--border) solid var(--strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.demo-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.demo-cursor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) translate(var(--dx, 0px), var(--dy, 0px));
+  pointer-events: auto;
+  will-change: transform;
+  /* Smooth snap back to center on leave; disabled while actively tracking */
+  transition: transform 0.18s ease-out;
+}
+
+.demo.is-tracking .demo-cursor { transition: none; }
+
+.demo-play {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  font: inherit;
+  font-weight: 500;
+  padding: var(--s10) var(--s16);
+  background: var(--text);
+  color: var(--ink);
+  border: var(--border) solid var(--strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.demo-play .demo-play-icon {
+  display: block;
+  flex: none;
+}
+
+.demo-play:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.demo-play:focus-visible {
+  outline: var(--border) solid var(--text);
+  outline-offset: 2px;
+}
+
+/* While playing: native controls, normal cursor, chip gone */
+.demo.is-playing { cursor: auto; }
+
+.demo.is-playing .demo-cursor { display: none; }
+
+/* Fine pointers only: hide the system cursor while idle so the chip stands in for it */
+@media (hover: hover) and (pointer: fine) {
+  .demo:not(.is-playing) { cursor: none; }
+}
+
+/* Reduced motion: the chip stays centered (--dx/--dy stay 0, enforced in demo.js) */
+@media (prefers-reduced-motion: reduce) {
+  .demo-cursor {
+    transform: translate(-50%, -50%);
+    will-change: auto;
+    transition: none;
+  }
+}
+
 /* ---------- app mockup (widget visual language) ---------- */
+
+/* Extra room when the mockup sits under the Method cards */
+.cards + .mockup { margin-top: var(--section-gap); }
 
 .mockup {
   border: var(--border) solid var(--strong);
