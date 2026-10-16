@@ -1,37 +1,34 @@
-<p align="center">
-  [![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
-  [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-get%20it-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)
-  [![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest)
-  [![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
-  [![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="assets/timeblocks-icon.png" alt="TimeBlocks" width="160">
-</p>
+[![Download for Windows](https://img.shields.io/badge/Download-TimeBlocks--Setup.exe-0078D4?logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe)
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-get%20it-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/9PFRD4P2ZHWS)
+[![Windows 10 & 11](https://img.shields.io/badge/platform-Windows%2010%20%2B%2011-lightgrey?style=flat-square&logo=windows&logoColor=white)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+[![Free](https://img.shields.io/badge/price-free-3FA34D?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
+[![Releases](https://img.shields.io/badge/releases-latest-informational?style=flat-square)](https://github.com/singlesoup/timeblocks-web/releases/latest)
 
-<h1 align="center">TimeBlocks</h1>
+<img src="assets/timeblocks-icon.png" alt="TimeBlocks" width="160">
 
-<p align="center"><strong>Own your day. Block by block.</strong></p>
+# TimeBlocks
 
-<p align="center">A small always-on-top Windows widget that turns your day into named blocks of minutes. Plan in the morning, run a focus timer on one block at a time, and see whether the day matched the plan.</p>
+**Own your day. Block by block.**
 
-<p align="center"><strong><a href="https://timeblocks-web.vercel.app/">Website</a></strong> | <strong><a href="https://apps.microsoft.com/detail/9PFRD4P2ZHWS">Microsoft Store</a></strong> | <strong><a href="https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe">Download TimeBlocks-Setup.exe</a></strong></p>
+A small always-on-top Windows widget that turns your day into named blocks of minutes. Plan in the morning, run a focus timer on one block at a time, and see whether the day matched the plan.
 
-<p align="center">Windows 10 &amp; 11 · Free · No account · Data stays on your PC</p>
+**<a href="https://timeblocks-web.vercel.app/">Website</a>** | **<a href="https://apps.microsoft.com/detail/9PFRD4P2ZHWS">Microsoft Store</a>** | **<a href="https://github.com/singlesoup/timeblocks-web/releases/latest/download/TimeBlocks-Setup.exe">Download TimeBlocks-Setup.exe</a>**
+
+Windows 10 &amp; 11 · Free · No account · Data stays on your PC
+
+</div>
 
 ---
 
 ## What it is
 
-<p align="center">
-  <!-- GitHub often sanitizes or doesn't autoplay video tags in READMEs; link the demo instead so users can open it. -->
-  <a href="assets/demo.mp4">
-    <img src="assets/timeblocks-icon.png" alt="Demo — click to play" width="720">
-  </a>
-  <br>
-  <em>Click the image to open or download the demo video.</em>
-</p>
+<div align="center">
+
+  <img src="assets/demo.gif" alt="TimeBlocks Demo" width="720">
+
+</div>
 
 A block is a name plus planned minutes. **Start** runs a focus segment (25+5, 30+5, or 60+10). When focus ends, the break starts on its own and both are written to the log. The daily report sums focus minutes for the day and shows planned vs actual.
 
