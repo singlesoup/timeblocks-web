@@ -536,6 +536,11 @@ main {
 
 .report-table td:first-child { font-family: var(--font-ui); }
 
+/* Planned vs actual: color only Actual (matches app Difference colors). */
+.report-table tr.delta-neg td:nth-child(3) { color: #e57373; }
+.report-table tr.delta-pos td:nth-child(3) { color: #81c784; }
+.report-table tr.delta-zero td:nth-child(3) { color: #ffd54f; }
+
 /* ---------- faq ---------- */
 
 .faq {

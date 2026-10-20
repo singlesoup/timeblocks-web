@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- EXPERIMENTAL: centered homepage. Remove this link to restore left alignment. -->
+  <link rel="stylesheet" href="styles.center-trial.css">
 </head>
 <body>
 
@@ -168,10 +170,11 @@
             <tr><th>Block</th><th>Planned</th><th>Actual</th></tr>
           </thead>
           <tbody>
-            <tr><td>Deep Work</td><td>90m</td><td>82m</td></tr>
-            <tr><td>Writing</td><td>60m</td><td>64m</td></tr>
-            <tr><td>Meetings</td><td>30m</td><td>47m</td></tr>
-            <tr><td>Emails</td><td>30m</td><td>18m</td></tr>
+            <tr class="delta-neg"><td>Deep Work</td><td>90m</td><td>82m</td></tr>
+            <tr class="delta-pos"><td>Writing</td><td>60m</td><td>64m</td></tr>
+            <tr class="delta-zero"><td>Break</td><td>10m</td><td>10m</td></tr>
+            <tr class="delta-pos"><td>Meetings</td><td>30m</td><td>47m</td></tr>
+            <tr class="delta-neg"><td>Emails</td><td>30m</td><td>18m</td></tr>
           </tbody>
         </table>
       </div>

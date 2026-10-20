@@ -1,0 +1,73 @@
+/*
+  EXPERIMENTAL centered homepage layout (Woblo / Ratio style).
+
+  How to revert:
+  1. Remove the <link rel="stylesheet" href="styles.center-trial.css"> from index.html
+  2. Optionally delete this file
+
+  Does not change DESIGN.md tokens, button shapes, or legal/download pages.
+*/
+
+.hero {
+  text-align: center;
+}
+
+.hero .chip {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .cta-row {
+  justify-content: center;
+}
+
+.hero .demo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  text-align: center;
+}
+
+.section-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section .cta-row {
+  justify-content: center;
+}
+
+.cards,
+.cards-2,
+.faq {
+  text-align: left;
+}
+
+.mockup {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  max-width: none;
+  width: 100%;
+}
+
+.report-table-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.report-table th,
+.report-table td {
+  text-align: center;
+}
+
+.download .proof {
+  text-align: center;
+}
