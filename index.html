@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TimeBlocks — Own your day. Block by block.</title>
-  <meta name="description" content="TimeBlocks is a focused Windows time-blocking timer. Plan your day in blocks, focus on one at a time, and see where your time really went.">
+  <title>TimeBlocks — Offline Time Blocking &amp; Pomodoro Timer for Windows</title>
+  <meta name="description" content="TimeBlocks is a lightweight, offline Windows app for time blocking and Pomodoro focus sessions. No cloud, no account. Plan your day in blocks and track planned vs actual hours. Free for Windows 10 and 11.">
+  <link rel="canonical" href="https://timeblocks.in/">
+  <!-- Open Graph / social preview cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TimeBlocks">
+  <meta property="og:title" content="TimeBlocks — Offline Time Blocking &amp; Pomodoro Timer for Windows">
+  <meta property="og:description" content="Plan your day in blocks, focus on one at a time, and see where your time really went. Free, offline, no account required.">
+  <meta property="og:url" content="https://timeblocks.in/">
+  <meta property="og:image" content="https://timeblocks.in/assets/store-hero-1920x1080.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="TimeBlocks app showing a daily timeline and focus timer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TimeBlocks — Offline Time Blocking &amp; Pomodoro Timer for Windows">
+  <meta name="twitter:description" content="Plan your day in blocks, focus on one at a time, and see where your time really went. Free, offline, no account required.">
+  <meta name="twitter:image" content="https://timeblocks.in/assets/store-hero-1920x1080.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -16,6 +31,34 @@
   <link rel="stylesheet" href="styles.css">
   <!-- EXPERIMENTAL: centered homepage. Remove this link to restore left alignment. -->
   <link rel="stylesheet" href="styles.center-trial.css">
+  <!-- Structured data: app + FAQ for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TimeBlocks",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "url": "https://timeblocks.in/",
+    "downloadUrl": "https://timeblocks.in/download",
+    "softwareVersion": "1.0.2",
+    "description": "Offline time blocking and Pomodoro timer for Windows. Plan your day in blocks and track planned vs actual hours.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "SoupApps" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is it really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Download it, use it. No account, no trial clock, no locked features." } },
+      { "@type": "Question", "name": "Where does my data go?", "acceptedAnswer": { "@type": "Answer", "text": "Nowhere. Everything is stored on your own PC. There is no cloud, no account, nothing to sign into." } },
+      { "@type": "Question", "name": "Which Windows versions are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Windows 10 and Windows 11. macOS and Linux are not supported right now." } },
+      { "@type": "Question", "name": "Do I need to know time blocking already?", "acceptedAnswer": { "@type": "Answer", "text": "No. If you can name a task and pick a duration, you already know enough." } }
+    ]
+  }
+  </script>
   <!-- Vercel Web Analytics (free, cookieless) -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
