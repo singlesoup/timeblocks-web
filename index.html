@@ -76,6 +76,7 @@
     <nav class="site-nav" aria-label="Page">
       <a href="#how">How it works</a>
       <a href="#report">Daily report</a>
+      <a href="#who">Who it&rsquo;s for</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-actions">
@@ -95,7 +96,7 @@
     <section class="hero">
       <p class="chip">Windows 10 &amp; 11 &middot; Free</p>
       <h1>Own your day.<br>Block by block.</h1>
-      <p class="lede">TimeBlocks is a small Windows timer that turns your day into clear blocks of work. Plan the day in the morning, focus on one block at a time, and finish knowing exactly where your hours went.</p>
+      <p class="lede">TimeBlocks is a tiny timer app that turns your day into clear blocks of work. Plan the day, focus on one block at a time, and finish knowing exactly where your hours went.</p>
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" href="download">
           <svg class="btn-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false">
@@ -138,93 +139,181 @@
     <!-- ============ HOW IT WORKS ============ -->
     <section class="section" id="how">
       <p class="section-label">How it works</p>
-      <h2>Three steps. No learning curve.</h2>
-      <div class="cards">
-        <div class="card">
-          <p class="card-num">01</p>
-          <h3>Name your blocks</h3>
-          <p>In the morning, split your day into named chunks &mdash; &ldquo;Deep Work&rdquo;, &ldquo;Emails&rdquo;, &ldquo;Gym&rdquo;. Give each a length. That&rsquo;s the whole plan.</p>
+      <h2>Plan. Focus. Review. There&rsquo;s no fourth step.</h2>
+      <div class="hiw-grid">
+
+        <div class="hiw-step">
+          <div class="hiw-mock" role="img" aria-label="Plan screen: add tomorrow&rsquo;s task with minutes, set a daily reminder">
+            <p class="hiw-mock-title">Plan for Tomorrow</p>
+            <div class="hiw-plan-row">
+              <span class="hiw-field hiw-field-task">Tomorrow&rsquo;s task</span>
+              <span class="hiw-field hiw-field-min">25</span>
+              <span class="ui-btn ui-btn-primary">Add</span>
+            </div>
+            <p class="hiw-mock-sub">Reminder</p>
+            <div class="hiw-remind">
+              <span class="hiw-check" aria-hidden="true"></span>Remind me
+              <span class="hiw-remind-value">09:00 AM &middot; Daily</span>
+            </div>
+          </div>
+          <div class="hiw-caption">
+            <h3>1. Plan</h3>
+            <p>Create your block with a duration. Plan tomorrow, tonight and see the list is waiting in the next morning.</p>
+          </div>
         </div>
-        <div class="card">
-          <p class="card-num">02</p>
-          <h3>Focus on one</h3>
-          <p>Start the timer on the current block and do only that until it rings. Short Pomodoro-style sprints keep it sustainable.</p>
+
+        <div class="hiw-step">
+          <div class="hiw-mock hiw-mock-focus" role="img" aria-label="Focus timer at 24:58 with a green focus dot and a break starting automatically">
+            <p class="hiw-status"><span class="dot dot-focus" aria-hidden="true"></span>Focus</p>
+            <p class="hiw-clock">24:58</p>
+            <p class="hiw-task">Write report</p>
+            <p class="hiw-note">Break 05:00 starts automatically</p>
+            <span class="ui-btn ui-btn-primary hiw-pause">Pause</span>
+          </div>
+          <div class="hiw-caption">
+            <h3>2. Focus</h3>
+            <p>Run the timer on one block at a time. Pick 25+5, 30+5 or 60+10, and the break starts on its own.</p>
+          </div>
         </div>
-        <div class="card">
-          <p class="card-num">03</p>
-          <h3>See the truth</h3>
-          <p>At day&rsquo;s end, TimeBlocks shows planned vs. actual for every block. You&rsquo;ll see exactly where the day really went.</p>
+
+        <div class="hiw-step">
+          <div class="hiw-mock" role="img" aria-label="Planned versus actual table with a difference column">
+            <p class="hiw-mock-title">Planned vs actual</p>
+            <table class="hiw-table">
+              <thead>
+                <tr><th>Task</th><th>Plan</th><th>Actual</th><th>Diff</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Write report</td><td>1h</td><td>1h 5m</td><td class="delta-pos">+5m</td></tr>
+                <tr><td>Practice</td><td>30m</td><td>10m</td><td class="delta-neg">&minus;20m</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="hiw-caption">
+            <h3>3. Review</h3>
+            <p>The timer writes down what happened right next to what you planned. No second step to remember.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ DAILY REPORT ============ -->
+    <section class="section" id="report">
+      <div class="split">
+        <div class="report-card" role="img" aria-label="Daily report with planned versus actual time per task, a green, yellow or red difference, a session log and day totals">
+          <div class="report-head">
+            <p class="report-date">Saturday, October 31</p>
+            <p class="report-count">2 / 4 blocks completed</p>
+          </div>
+          <table class="report-table report-table-app">
+            <thead>
+              <tr><th>Task</th><th>Planned</th><th>Actual</th><th>Diff</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Write report</td><td>1h 0m</td><td>1h 5m</td><td class="delta-pos">+5m</td></tr>
+              <tr><td>Study chapter 4</td><td>45m</td><td>40m</td><td class="delta-zero">&minus;5m</td></tr>
+              <tr><td>Practice questions</td><td>30m</td><td>10m</td><td class="delta-neg">&minus;20m</td></tr>
+              <tr><td>Reply to emails</td><td>20m</td><td>0m</td><td class="delta-neg">&minus;20m</td></tr>
+            </tbody>
+          </table>
+          <div class="report-log">
+            <p>19:01 &middot; Study chapter 4 &middot; Break &middot; 5m</p>
+            <p>18:56 &middot; Study chapter 4 &middot; Focus &middot; 25m</p>
+            <p>18:30 &middot; Write report &middot; Focus &middot; 1h 5m</p>
+          </div>
+        </div>
+        <div class="split-text">
+          <p class="section-label">Daily report</p>
+          <h2>An honest end-of-day scorecard.</h2>
+          <p class="section-lede">Each task shows what you planned, what you actually did, and the gap, in green, yellow or red. Breaks are counted separately, and a session log and day remark capture how the day really went.</p>
+          <p class="section-lede">Past days stay one tap away, so you can look back over the week.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ PLAIN-WORDS EXPLAINER ============ -->
-    <section class="section">
-      <p class="section-label">The method, in plain words</p>
-      <h2>Two simple ideas that work.</h2>
-      <div class="cards cards-2">
-        <div class="card">
-          <h3>Time blocking</h3>
-          <p>Instead of a to-do list that never ends, you assign every hour a job. When 10:00 says &ldquo;Writing&rdquo;, you write. Decisions are made once, in the morning &mdash; not fifty times during the day.</p>
+    <!-- ============ DECIDING WHAT'S NEXT ============ -->
+    <section class="section" id="next">
+      <div class="split">
+        <div class="split-text">
+          <p class="section-label">Deciding what&rsquo;s next</p>
+          <h2>Can&rsquo;t start? It picks the next task for you.</h2>
+          <p class="section-lede">Tell TimeBlocks how much time you have, your energy and what you want from this stretch. It suggests the task that fits, so you spend less effort deciding and more doing.</p>
         </div>
-        <div class="card">
-          <h3>Pomodoro</h3>
-          <p>Work in short, timed sprints &mdash; usually 25 minutes &mdash; then take a real break. A ticking timer makes starting easy, and breaks keep your brain sharp for the next sprint.</p>
-        </div>
-      </div>
-
-      <!-- App mockup, built in the widget's own visual language -->
-      <div class="mockup" role="img" aria-label="Preview of the TimeBlocks widget showing a daily timeline and focus timer">
-        <div class="mockup-titlebar">
-          <span class="mockup-brand">TimeBlocks</span>
-          <span class="mockup-date">Today, Thu Oct 8</span>
-          <span class="mockup-controls" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <div class="mockup-body">
-          <div class="mockup-timeline">
-            <p class="mockup-label">Daily timeline</p>
-            <ul>
-              <li><span class="t">08:00</span><span class="n">Deep Work</span><span class="d">90m</span></li>
-              <li><span class="t">09:45</span><span class="n">Break</span><span class="d">10m</span></li>
-              <li class="active"><span class="t">10:00</span><span class="n">Writing</span><span class="d">60m</span></li>
-              <li><span class="t">11:15</span><span class="n">Meetings</span><span class="d">30m</span></li>
-              <li><span class="t">12:00</span><span class="n">Lunch</span><span class="d">45m</span></li>
-            </ul>
-            <p class="mockup-meta">3 / 5 blocks completed today</p>
+        <div class="next-cards" role="img" aria-label="Your current context card with available time, energy and focus goal, and a recommended next task">
+          <div class="context-card">
+            <p class="context-title">Your current context</p>
+            <div class="context-row"><span>Available time</span><strong>2 hours</strong></div>
+            <div class="context-row"><span>Energy</span><strong>Medium</strong></div>
+            <div class="context-row"><span>Focus goal</span><strong>Deep work</strong></div>
           </div>
-          <div class="mockup-timer">
-            <p class="mockup-label">Focus timer</p>
-            <p class="mockup-clock">24:13</p>
-            <p class="mockup-meta">Session: Writing</p>
-            <div class="mockup-bar"><span style="width:50%"></span></div>
-            <p class="mockup-meta">50% complete</p>
-            <div class="mockup-actions">
-              <span class="btn btn-sm">Pause</span>
-              <span class="btn btn-sm">Reset</span>
+          <div class="next-card">
+            <div class="next-head">
+              <span class="next-label">Next up for you</span>
+              <span class="next-badge">Recommended</span>
+            </div>
+            <p class="next-task">Study chapter 4</p>
+            <p class="next-meta"><span class="delta-neg">High</span> &middot; Planned 1h 0m &middot; It fits your available time</p>
+            <div class="next-actions">
+              <span class="ui-btn ui-btn-primary">Start Focus Session</span>
+              <span class="ui-btn">Choose Another Task</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ DAILY REPORT ============ -->
-    <section class="section" id="report">
-      <p class="section-label">Daily report</p>
-      <h2>Planned vs. actual, every evening.</h2>
-      <p class="section-lede">TimeBlocks logs what you planned against what you actually did &mdash; per block, per day. Over weeks, the pattern is undeniable: you&rsquo;ll spot the hours that quietly disappear.</p>
-      <div class="report-table-wrap">
-        <table class="report-table">
-          <thead>
-            <tr><th>Block</th><th>Planned</th><th>Actual</th></tr>
-          </thead>
-          <tbody>
-            <tr class="delta-neg"><td>Deep Work</td><td>90m</td><td>82m</td></tr>
-            <tr class="delta-pos"><td>Writing</td><td>60m</td><td>64m</td></tr>
-            <tr class="delta-zero"><td>Break</td><td>10m</td><td>10m</td></tr>
-            <tr class="delta-pos"><td>Meetings</td><td>30m</td><td>47m</td></tr>
-            <tr class="delta-neg"><td>Emails</td><td>30m</td><td>18m</td></tr>
-          </tbody>
-        </table>
+    <!-- ============ WHO IT'S FOR ============ -->
+    <section class="section" id="who">
+      <p class="section-label">Who it&rsquo;s for</p>
+      <h2>Built for students and people who work alone, especially ADHD brains.</h2>
+      <p class="section-lede">Distractibility, time blindness and trouble starting aren&rsquo;t willpower failures. They need a different kind of structure: the next task already named, the timer always visible, breaks that start themselves, and feedback at the end of the day.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Students and exam prep</h3>
+          <ul>
+            <li>Plan mode to set tomorrow&rsquo;s study blocks tonight</li>
+            <li>Every timer logs itself, so study hours are on record</li>
+            <li>Daily planned-vs-actual report, subject by subject</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>ADHD-friendly focus</h3>
+          <ul>
+            <li>Next-task recommendations by time, energy and focus goal</li>
+            <li>Always-visible compact timer that hides in the tray</li>
+            <li>Breaks that start on their own</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Solo workers at a PC</h3>
+          <ul>
+            <li>Plan the day without a team or a manager</li>
+            <li>See where deep work really happened</li>
+            <li>Free, offline, and nothing to sign up for</li>
+          </ul>
+        </div>
+      </div>
+      <p class="who-not">Not a fit: teams, managers watching someone else&rsquo;s day, billable hours, or anyone who needs the same plan on a phone.</p>
+    </section>
+
+    <!-- ============ HOW IT'S DIFFERENT ============ -->
+    <section class="section" id="different">
+      <p class="section-label">How it&rsquo;s different</p>
+      <h2>Keeps the plan. Checks the day against it.</h2>
+      <div class="diff-grid">
+        <div class="diff-cell">
+          <p class="diff-kicker">A Pomodoro app</p>
+          <p>times a session and forgets the plan. <strong>TimeBlocks keeps the plan and checks the day against it.</strong></p>
+        </div>
+        <div class="diff-cell">
+          <p class="diff-kicker">A to-do app</p>
+          <p>tells you whether something is done. <strong>TimeBlocks tells you whether it got its time.</strong></p>
+        </div>
+        <div class="diff-cell">
+          <p class="diff-kicker">A time tracker</p>
+          <p>explains where the hours went after the fact, if you log them. <strong>TimeBlocks writes the actuals while you focus.</strong></p>
+        </div>
       </div>
     </section>
 

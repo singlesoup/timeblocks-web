@@ -56,6 +56,10 @@ A selected row inverts like a primary button. Its meta line uses `#4a4a4a`.
 
 Tables and cards use the hairline `#3a3a3a`.
 
+## App accent colors
+
+The desktop app’s planned-vs-actual difference colors are the only non-gray accents in the system: green `#81c784`, yellow `#ffd54f`, red `#e57373`. Plus the green focus dot. They are used only where the desktop app itself uses them (delta chips, focus dot); nowhere else on the page.
+
 ## Space
 
 4, 6, 8, 10, 12, and 16px are the steps. Sections sit 30px apart.
