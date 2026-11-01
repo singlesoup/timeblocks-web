@@ -243,8 +243,10 @@ main {
   margin-bottom: 64px;
 }
 
-/* Mac/Linux interest line (hero) — sits above the trust line, under the buttons */
+/* Mac/Linux interest line (hero) — sits above the trust line, under the buttons.
+   Top padding moves this line and the trust line below it down as one group. */
 .proof-interest {
+  padding-top: var(--s12);
   margin-bottom: var(--s8);
 }
 
@@ -256,7 +258,11 @@ main {
   text-underline-offset: 2px;
 }
 
-.proof-interest a:hover,
+/* "Tell us" stands out in primary text color */
+.proof-interest a {
+  color: var(--text);
+}
+
 .faq-item a:hover {
   color: var(--text);
 }
