@@ -16,10 +16,61 @@ Patterns: [index.html](index.html), [styles.css](styles.css), [download/index.ht
 | 2. Point every installer button at `/download` and drop the homepage steps | Done. Header / hero / bottom installer buttons go to `download`; "— Free" dropped; "How to download and use" steps removed. |
 | 3. Header: drop Store, label **Download**, center the nav | Done. Store button removed from homepage header; header label is **Download**; `.header-inner` is a `1fr auto 1fr` grid; changelog + privacy headers updated; sub-760px hiding unchanged. |
 | 4. Windows icon on every installer button; colorful Windows icon on every Store button | Done. `currentColor` four-pane Windows SVG on all installer buttons (home header, hero, bottom, changelog, privacy); Windows-colored SVG on both Store buttons. `.btn` is inline-flex with a gap. |
+| 5. Homepage sections from reference design | Done. All 5 sections rebuilt + QA (equal 339x228 mock boxes, centered interiors, copy polish, nav 4 items). Merged to `main` via PR #1 (`fca9598`); live at https://singlesoup.github.io/timeblocks-web/. |
+| 6. SEO / AEO / GEO for the live site (timeblocks.in) | Mostly done. Kilo's audit done (earlier "no OG/canonical" findings were stale — already on `main`); implementation commit `a54b834` "SEO: schema, favicon, publisher line" pushed to `seo_improve`. Remaining: llms.txt (approach decided jointly, not yet built) and PR to `main`. |
+| 7. Mac/Linux interest form links | Done. Hero muted line + FAQ link to the Tally form; JSON-LD mirror synced. Commits `4b250ca` + `da89410` (design feedback) on `seo_improve`. Interest card and "Coming next" item dropped per human decision (section does not exist). |
 
-All work is in the working tree only — not committed, not merged (human review first).
+Tasks 1-5 are merged to `main` (PR #1) and deployed. Tasks 6-7 live on branch `seo_improve` (pushed through `a54b834`).
 
 Do the tasks in order.
+
+## Task 6 — SEO / AEO / GEO for the live site
+
+### Work
+
+1. Add `https://useratio.app/llms.txt` support for crawlers and AI agents.
+2. Run SEO / AEO / GEO audit via Kilo (skills: open-seo, ai-seo, seo-audit, content-strategy, keyword-research) on the live site only (timeblocks.in).
+3. Apply or act on audit findings.
+
+### Status
+
+- Audit **completed** by Kilo on the live site.
+- Findings were partially stale: OG/Twitter cards, canonicals, robots.txt, sitemap.xml, and JSON-LD (SoftwareApplication + FAQPage) already exist on `main` (commit `0a87c5e`). Verified before adding anything.
+- **Kilo's implementation commit landed and pushed: `a54b834` "SEO: schema, favicon, publisher line"** on `seo_improve` — SoftwareApplication schema refresh (BusinessApplication category, publisher, trimmed description), publisher line in footer, favicon verification. He did NOT touch llms.txt, pricing.md, WebPage schema, or dateModified, as agreed.
+- Kilo reviewed the existing FAQPage JSON-LD for exact text match with visible FAQ copy (kept in sync by Task 7) instead of adding a second block.
+- Open: llms.txt approach (research done, decision pending with human); /pricing.md not pursued (real page is /download); GSC/Bing sitemap submission is an external account-level step.
+
+### Acceptance
+
+- [x] SEO/AEO/GEO audit completed on the live site (Kilo).
+- [ ] llms.txt in place for the live site.
+- [x] Findings applied: schema + publisher line + favicon in commit `a54b834` (llms.txt tracked by its own acceptance box; GSC/Bing submission is external).
+
+## Task 7 — Mac/Linux interest form links (completed)
+
+Form: `https://tally.so/r/kblAOZ`, every link `target="_blank" rel="noopener"`.
+
+### Work
+
+1. Hero: muted line `Windows only for now. Want TimeBlocks for Mac/Linux? Tell us.` added between the `.cta-row` and the trust `.proof` line; only "Tell us" is a link (underlined).
+2. Interest card: dropped per human decision — replaced by the hero line above (spec's "Coming next" section does not exist in the current page).
+3. "Coming next" Mac/Linux item: dropped — no such item exists in the current markup.
+4. FAQ: question retitled to "Which systems does it run on?", answer now "Windows 10 and 11. Mac and Linux will follow once there's enough demand. Vote for yours." with "Vote for yours" linking to the form.
+5. JSON-LD FAQPage mirror in `<head>` updated to match the visible FAQ (same content, kept in sync).
+6. `styles.css`: `.proof-interest` margin override + underlined inline-link styling with visible `:focus-visible` outline for `.proof-interest a` and `.faq-item a`. No new colors or fonts.
+7. Design feedback applied: 12px top padding on the interest line (hero lines move as one group), "Tell us" in primary text color `var(--text)` (#f4f4f4).
+
+### Acceptance
+
+- [x] All links open the form in a new tab (`target="_blank" rel="noopener"`).
+- [x] Verified at 360px and 1280px: links visible, no horizontal overflow from these changes, focus rule present.
+- [x] One commit: `4b250ca` "Add Mac/Linux interest form links", pushed to `seo_improve`; diff touches only the intended places.
+- [x] Design feedback round applied: commit `da89410` "Hero interest line: top spacing and white link color per design feedback" (styles.css only; pathspec commit so Kilo's staged index.html was untouched). Verified: 24px gap above the line, both hero lines moved as one group, "Tell us" in `var(--text)` (#f4f4f4), 360px and 1280px clean.
+
+### Notes
+
+- Pre-existing issue (not from this task): horizontal overflow at 360px from `.report-card` / `.report-table` in the Daily Report section — candidate for a separate fix.
+- Kilo's SoftwareApplication schema edits were preserved in the working tree (backed up and restored around this commit) so his SEO commit stays separate.
 
 ## Locked decisions
 
@@ -72,10 +123,10 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 
 ### Acceptance
 
-- [ ] `/download` shows the brand mark, “TimeBlocks is on its way.”, the Downloads-folder note, three numbered cards, and “For Windows 10 and 11, 64-bit.”
-- [ ] Cards are a vertical stack with the number on the left of each card, as on the Ratio page.
-- [ ] Opening `/download` starts `TimeBlocks-Setup.exe` and leaves the instructions on screen. “download it here” hits the same file URL.
-- [ ] Header is brand + Back to the site. No installer button on this page.
+- [x] `/download` shows the brand mark, “TimeBlocks is on its way.”, the Downloads-folder note, three numbered cards, and “For Windows 10 and 11, 64-bit.” (verified in `download/index.html`: brand mark line 33, h1 line 34, dl-notes lines 35-36, three `.dl-step` cards lines 38-51, foot line 53)
+- [x] Cards are a vertical stack with the number on the left of each card, as on the Ratio page. (`.dl-step` with `.dl-num` badge + sentence, one step per card)
+- [x] Opening `/download` starts `TimeBlocks-Setup.exe` and leaves the instructions on screen. “download it here” hits the same file URL. (hidden iframe line 58, same GitHub Releases URL as the fallback link)
+- [x] Header is brand + Back to the site. No installer button on this page. (`header-back` line 27)
 
 ---
 
@@ -89,9 +140,9 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 
 ### Acceptance
 
-- [ ] Homepage has no “How to download and use” list.
-- [ ] Both homepage installer buttons read **Download for Windows** and go to `/download`.
-- [ ] Both Store buttons still go to the Store listing.
+- [x] Homepage has no “How to download and use” list. (no `download-steps` / “How to download” matches in `index.html`)
+- [x] Both homepage installer buttons read **Download for Windows** and go to `/download`. (hero line 100, bottom line 350; no “— Free” anywhere)
+- [x] Both Store buttons still go to the Store listing. (lines 106, 356 → `apps.microsoft.com/detail/9PFRD4P2ZHWS`)
 
 ---
 
@@ -106,9 +157,9 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 
 ### Acceptance
 
-- [ ] Homepage header is brand | How it works, Daily report, FAQ | Download.
-- [ ] No Store button in any header.
-- [ ] Nav stays hidden under 760px, with the header actions.
+- [x] Homepage header is brand | How it works, Daily report, Who it's for, FAQ | Download. (nav lines 75-80, header-actions lines 81-84; no Store button in any header)
+- [x] No Store button in any header. (only installer control per header: `index.html` 82, `changelog.html` 33, `privacy.html` 33 — all `href="download"`)
+- [x] Nav stays hidden under 760px, with the header actions. (`styles.css` 1170-1172)
 
 ---
 
@@ -122,9 +173,9 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 
 ### Acceptance
 
-- [ ] Every installer button shows a Windows mark that follows the button text color, including hover.
-- [ ] Every Store button shows the colored Windows mark.
-- [ ] Header installer buttons say **Download**. Body installer buttons say **Download for Windows**.
+- [x] Every installer button shows a Windows mark that follows the button text color, including hover. (`fill="currentColor"` four-pane SVG: `index.html` 84, 102, 352; `changelog.html` 35; `privacy.html` 35; `.btn` hover keeps `currentColor`)
+- [x] Every Store button shows the colored Windows mark. (`index.html` 108, 358 — `#f25022`/`#7fba00`/`#00a4ef`/`#ffb900`)
+- [x] Header installer buttons say **Download**. Body installer buttons say **Download for Windows**.
 
 ---
 
@@ -151,9 +202,9 @@ Translation rules: tokens instead of raw hex, square corners, IBM Plex Mono, 14p
 
 ### Acceptance
 
-- [ ] All 5 sections render with ids `#how`, `#report`, `#next`, `#who`, `#different`.
-- [ ] “Method in plain words” section removed; hero/FAQ/download/footer untouched.
-- [ ] Orca browser screenshot of each section matches the reference within design-system substitutions; loop until visual match.
+- [x] All 5 sections render with ids `#how`, `#report`, `#next`, `#who`, `#different`.
+- [x] “Method in plain words” section removed; hero/FAQ/download/footer untouched.
+- [x] Orca browser screenshot of each section matches the reference within design-system substitutions; loop until visual match.
 
 ### Locked decisions
 
