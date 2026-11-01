@@ -1,8 +1,8 @@
 # TimeBlocks web — download page and buttons
 
-Repo: `singlesoup/timeblocks-web` (this checkout). Production: https://timeblocks-web.vercel.app/
+Repo: `singlesoup/timeblocks-web` (this checkout). Production: https://timeblocks.in/ (custom domain; deploys via https://timeblocks-web.vercel.app/).
 
-Work on a branch off `main`. Do **not** merge to `main` unless the human asks. Do **not** touch the private app repo `singlesoup/timeblocks`.
+Work on a branch off `main`. Do **not** merge to `main` unless the human asks. Do **not** touch the app repo (it is private and separate from this one).
 
 Design system: [DESIGN.md](DESIGN.md) (black/white, 1px borders, square corners, Inter / IBM Plex Mono). The **download page layout** is the exception: match Ratio’s download page (https://useratio.app/download?os=windows and the screenshot the human attached). Copy that page’s structure, not its typeface, pill radius, or purple mark.
 
@@ -184,7 +184,7 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 
 ## Task 5 — Homepage sections from reference design
 
-Rebuild 5 homepage sections in `index.html`/`styles.css` to match the reference design (`C:\Users\samon\Downloads\Home page-html\Main.dc.html` lines 115-278; screenshot `Home page@1x.png`), translating into the DESIGN.md system rather than copying raw styles.
+Rebuild 5 homepage sections in `index.html`/`styles.css` to match the reference design (the reference HTML `Main.dc.html` lines 115-278 and screenshot `Home page@1x.png`, provided by the human outside this repo), translating into the DESIGN.md system rather than copying raw styles.
 
 Sections (ids `#how`, `#report`, `#next`, `#who`, `#different`):
 
@@ -217,3 +217,20 @@ Translation rules: tokens instead of raw hex, square corners, IBM Plex Mono, 14p
 - Design-system translation: tokens instead of raw hex, square corners, IBM Plex Mono, 14px base, 4-16px spacing steps.
 - Keep app delta colors `#81c784`/`#ffd54f`/`#e57373` and green focus dot (existing styles.css precedent).
 - Verification via Orca browser screenshots compared against `Home page@1x.png`, loop until match.
+
+---
+
+## Backlog
+
+- [ ] P3 (low, do later): Add two SEO content pages to timeblocks.in
+  - Page 1: "Time blocking for students and exam prep"
+    Covers: planning study blocks, using plan mode and the daily planned-vs-actual report during exam prep, and a sample study day.
+  - Page 2: "ADHD-friendly focus timer"
+    Covers: what TimeBlocks does today for ADHD (next-task recommendations by available time/energy/focus goal, always-visible compact widget, automatic breaks). Clearly label planned features (task initiation ramp, flow-state mode, distraction blocking) as "coming next", not as existing.
+  - Each page: 400–800 words of real, specific content from how the app works. No generic productivity filler, and no claims about features that aren't shipped.
+  - Use real screenshots with descriptive alt text.
+  - Link each page from the nav or footer, link back to the home page and the download button, and add both to sitemap.xml.
+  - Give each page its own title tag, meta description and canonical URL, plus Open Graph and Twitter tags matching the home page.
+  - Also check that existing changelog entries have dates (if not, add them).
+  - Why: the site is a single landing page, which is thin for search engines and AI tools. These pages target "study timer for exams" and "focus timer for ADHD" searches.
+  - Prerequisite: finish current feature work first.
