@@ -243,6 +243,36 @@ main {
   margin-bottom: 64px;
 }
 
+/* Mac/Linux interest line (hero) — sits above the trust line, under the buttons.
+   Top padding moves this line and the trust line below it down as one group. */
+.proof-interest {
+  padding-top: var(--s12);
+  margin-bottom: var(--s8);
+}
+
+/* Inline text links to the interest form: underlined, visible keyboard focus */
+.proof-interest a,
+.faq-item a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* "Tell us" stands out in primary text color */
+.proof-interest a {
+  color: var(--text);
+}
+
+.faq-item a:hover {
+  color: var(--text);
+}
+
+.proof-interest a:focus-visible,
+.faq-item a:focus-visible {
+  outline: var(--border) solid var(--text);
+  outline-offset: 2px;
+}
+
 /* ---------- hero demo video (cursor-follow play control) ---------- */
 
 .demo {
