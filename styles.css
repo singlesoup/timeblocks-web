@@ -243,6 +243,30 @@ main {
   margin-bottom: 64px;
 }
 
+/* Mac/Linux interest line (hero) — sits above the trust line, under the buttons */
+.proof-interest {
+  margin-bottom: var(--s8);
+}
+
+/* Inline text links to the interest form: underlined, visible keyboard focus */
+.proof-interest a,
+.faq-item a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.proof-interest a:hover,
+.faq-item a:hover {
+  color: var(--text);
+}
+
+.proof-interest a:focus-visible,
+.faq-item a:focus-visible {
+  outline: var(--border) solid var(--text);
+  outline-offset: 2px;
+}
+
 /* ---------- hero demo video (cursor-follow play control) ---------- */
 
 .demo {
