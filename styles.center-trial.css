@@ -71,3 +71,47 @@
 .download .proof {
   text-align: center;
 }
+
+/* --- new reference sections (#how #report #next #who #different) --- */
+
+/* App-mockup and card interiors stay left-aligned (same exemption as .cards) */
+.hiw-grid,
+.diff-grid,
+.next-cards,
+.report-card,
+.context-card,
+.next-card,
+.hiw-caption {
+  text-align: left;
+}
+
+/* HOW IT WORKS mock interiors are centered (align/justify/text-align) */
+.hiw-mock {
+  text-align: center;
+}
+
+.report-card .report-table th,
+.report-card .report-table td {
+  text-align: left;
+}
+
+/* Keep h2 visually centered now that it has a max-width */
+.section h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- split sections (#report #next): keep reference layout, text left-aligned --- */
+.split-text {
+  text-align: left;
+}
+
+.split-text h2 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.split-text .section-lede {
+  margin-left: 0;
+  margin-right: 0;
+}

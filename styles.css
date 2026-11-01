@@ -197,6 +197,7 @@ main {
   line-height: 1.15;
   margin-bottom: var(--s12);
   text-wrap: balance;
+  max-width: 680px;
 }
 
 .section-lede {
@@ -541,6 +542,372 @@ main {
 .report-table tr.delta-pos td:nth-child(3) { color: #81c784; }
 .report-table tr.delta-zero td:nth-child(3) { color: #ffd54f; }
 
+/* Delta colors used directly on a cell or inline value (app Difference colors). */
+.delta-pos { color: #81c784; }
+.delta-neg { color: #e57373; }
+.delta-zero { color: #ffd54f; }
+
+/* ---------- reference sections (how / report / next / who / different) ---------- */
+
+/* Two-column split: app surface on one side, copy on the other */
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--section-gap);
+  align-items: center;
+}
+
+.split .section-label { margin-bottom: var(--s8); }
+
+.split-text .section-lede { max-width: 46ch; }
+
+/* Decorative control used inside mockups (not interactive) */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: var(--s6) var(--s12);
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border) solid var(--strong);
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.ui-btn-primary {
+  background: var(--text);
+  color: var(--ink);
+}
+
+/* Status dot (matches the app's focus indicator) */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+}
+
+.dot-focus { background: #81c784; }
+
+/* --- how it works --- */
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s16);
+  margin-top: var(--s16);
+}
+
+.hiw-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+}
+
+.hiw-caption {
+  min-height: 86px;
+}
+
+.hiw-mock {
+  flex: 1;
+  border: var(--border) solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--s16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hiw-mock-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hiw-mock-sub {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-top: var(--s4);
+}
+
+.hiw-caption h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: var(--s6);
+}
+
+.hiw-caption p { color: var(--muted); }
+
+.hiw-plan-row {
+  display: flex;
+  gap: var(--s8);
+  align-items: stretch;
+}
+
+.hiw-field {
+  border: var(--border) solid var(--input-border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--placeholder);
+  padding: var(--s6) var(--s10);
+  font-size: var(--text-base);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hiw-field-task { flex: 1; }
+
+.hiw-remind {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  color: var(--muted);
+}
+
+.hiw-check {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border: var(--border) solid var(--input-border);
+  border-radius: var(--radius);
+}
+
+.hiw-remind-value {
+  margin-left: auto;
+  border: var(--border) solid var(--hairline);
+  background: var(--bg);
+  color: var(--text);
+  padding: var(--s4) var(--s10);
+  font-size: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.hiw-mock-focus {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hiw-status {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  font-size: var(--text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hiw-clock {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(40px, 4.5vw, 56px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.hiw-task { font-weight: 600; }
+
+.hiw-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.hiw-pause { margin-top: var(--s4); }
+
+.hiw-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--border) solid var(--hairline);
+  font-variant-numeric: tabular-nums;
+}
+
+.hiw-table th,
+.hiw-table td {
+  text-align: left;
+  padding: var(--s6) var(--s8);
+  border-bottom: var(--border) solid var(--hairline);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.hiw-table th {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.hiw-table td:first-child { font-family: var(--font-ui); }
+
+.hiw-table tbody tr:last-child th,
+.hiw-table tbody tr:last-child td { border-bottom: none; }
+
+/* --- daily report card --- */
+
+.report-card {
+  border: var(--border) solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--s16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+
+.report-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s8);
+  flex-wrap: wrap;
+}
+
+.report-date { font-size: 15px; font-weight: 600; }
+
+.report-count {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.report-table-app { border: var(--border) solid var(--hairline); }
+
+.report-log {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- deciding what's next --- */
+
+.next-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+
+.context-card,
+.next-card {
+  border: var(--border) solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--s16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+
+.next-card { border-color: var(--strong); }
+
+.context-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.context-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s8);
+  border-top: var(--border) solid var(--hairline);
+  padding-top: var(--s10);
+}
+
+.context-row span { color: var(--muted); }
+
+.next-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s8);
+}
+
+.next-label {
+  font-size: var(--text-secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.next-badge {
+  border: var(--border) solid var(--input-border);
+  color: var(--secondary);
+  font-size: var(--text-secondary);
+  padding: 2px var(--s8);
+}
+
+.next-task {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.next-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.next-actions {
+  display: flex;
+  gap: var(--s8);
+  flex-wrap: wrap;
+  margin-top: var(--s4);
+}
+
+/* --- who it's for --- */
+
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.card li { color: var(--muted); }
+
+.who-not {
+  margin-top: var(--s16);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* --- how it's different --- */
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: var(--border) solid var(--hairline);
+  margin-top: var(--s16);
+}
+
+.diff-cell {
+  padding: var(--s16);
+  border-right: var(--border) solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.diff-cell:last-child { border-right: none; }
+
+.diff-kicker {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.diff-cell p:not(.diff-kicker) { color: var(--muted); }
+
+.diff-cell strong { color: var(--text); }
+
 /* ---------- faq ---------- */
 
 .faq {
@@ -778,4 +1145,9 @@ main {
   .mockup-timeline { border-right: none; border-bottom: var(--border) solid var(--hairline); }
   .section { padding: 64px 0; }
   .hero { padding: 64px 0; }
+  .split { grid-template-columns: 1fr; }
+  .hiw-grid { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .diff-cell { border-right: none; border-bottom: var(--border) solid var(--hairline); }
+  .diff-cell:last-child { border-bottom: none; }
 }

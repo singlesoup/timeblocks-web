@@ -125,3 +125,41 @@ Keep the existing site footer (Home, Changelog, Privacy, email).
 - [ ] Every installer button shows a Windows mark that follows the button text color, including hover.
 - [ ] Every Store button shows the colored Windows mark.
 - [ ] Header installer buttons say **Download**. Body installer buttons say **Download for Windows**.
+
+---
+
+## Task 5 — Homepage sections from reference design
+
+Rebuild 5 homepage sections in `index.html`/`styles.css` to match the reference design (`C:\Users\samon\Downloads\Home page-html\Main.dc.html` lines 115-278; screenshot `Home page@1x.png`), translating into the DESIGN.md system rather than copying raw styles.
+
+Sections (ids `#how`, `#report`, `#next`, `#who`, `#different`):
+
+1. **HOW IT WORKS** — “Plan. Focus. Review. There’s no fourth step.” 3 mockup cards (Plan-for-Tomorrow form, 24:58 focus timer, planned-vs-actual table) plus numbered captions 1. Plan / 2. Focus / 3. Review.
+2. **DAILY REPORT** — “The honest end-of-day scorecard.” Saturday October 31 report card (4-row table + session log).
+3. **DECIDING WHAT’S NEXT** — “Can’t start? It picks the next task for you.” Context card + recommended-task card.
+4. **WHO IT’S FOR** — “Built for students and people who work alone, especially ADHD brains.” 3 cards + not-a-fit line.
+5. **HOW IT’S DIFFERENT** — “Keeps the plan. Checks the day against it.” 3-column joined grid.
+
+Edit rules: replace the existing How-it-works and Daily-report sections; delete the “Method in plain words” section; hero/FAQ/download/footer untouched.
+
+Translation rules: tokens instead of raw hex, square corners, IBM Plex Mono, 14px base type scale, spacing steps 4-16px. Exception: keep the app delta colors `#81c784` (green), `#ffd54f` (yellow), `#e57373` (red) and the green focus dot because the real app uses them (matches existing styles.css precedent).
+
+### Work
+
+1. In `index.html`, replace How-it-works and Daily-report sections with the 5 rebuilt sections; delete the “Method in plain words” section; leave everything else untouched.
+2. In `styles.css`, add only the styles needed for these 5 sections; do not restyle hero/FAQ/download/footer.
+
+### Acceptance
+
+- [ ] All 5 sections render with ids `#how`, `#report`, `#next`, `#who`, `#different`.
+- [ ] “Method in plain words” section removed; hero/FAQ/download/footer untouched.
+- [ ] Orca browser screenshot of each section matches the reference within design-system substitutions; loop until visual match.
+
+### Locked decisions
+
+- Build only these 5 sections from the reference; nothing else moves.
+- Replace How-it-works and Daily-report; delete “Method in plain words.”
+- Hero/FAQ/download/footer untouched.
+- Design-system translation: tokens instead of raw hex, square corners, IBM Plex Mono, 14px base, 4-16px spacing steps.
+- Keep app delta colors `#81c784`/`#ffd54f`/`#e57373` and green focus dot (existing styles.css precedent).
+- Verification via Orca browser screenshots compared against `Home page@1x.png`, loop until match.
