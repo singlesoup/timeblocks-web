@@ -17,10 +17,10 @@ Patterns: [index.html](index.html), [styles.css](styles.css), [download/index.ht
 | 3. Header: drop Store, label **Download**, center the nav | Done. Store button removed from homepage header; header label is **Download**; `.header-inner` is a `1fr auto 1fr` grid; changelog + privacy headers updated; sub-760px hiding unchanged. |
 | 4. Windows icon on every installer button; colorful Windows icon on every Store button | Done. `currentColor` four-pane Windows SVG on all installer buttons (home header, hero, bottom, changelog, privacy); Windows-colored SVG on both Store buttons. `.btn` is inline-flex with a gap. |
 | 5. Homepage sections from reference design | Done. All 5 sections rebuilt + QA (equal 339x228 mock boxes, centered interiors, copy polish, nav 4 items). Merged to `main` via PR #1 (`fca9598`); live at https://singlesoup.github.io/timeblocks-web/. |
-| 6. SEO / AEO / GEO for the live site (timeblocks.in) | Mostly done. Kilo's audit done (earlier "no OG/canonical" findings were stale — already on `main`); implementation commit `a54b834` "SEO: schema, favicon, publisher line" pushed to `seo_improve`. Remaining: llms.txt (approach decided jointly, not yet built) and PR to `main`. |
+| 6. SEO / AEO / GEO for the live site (timeblocks.in) | Done. Kilo's audit + implementation commit `a54b834` (schema refresh, publisher line, favicon verified); sitemap submitted to GSC + Bing (processing). llms.txt **deferred / not implemented** — excluded from the scoped task by decision. Publisher footer line re-added as "Built by SoupApps" (original edit was lost in the Task 7 commit separation; placeholder dropped per human choice). |
 | 7. Mac/Linux interest form links | Done. Hero muted line + FAQ link to the Tally form; JSON-LD mirror synced. Commits `4b250ca` + `da89410` (design feedback) on `seo_improve`. Interest card and "Coming next" item dropped per human decision (section does not exist). |
 
-Tasks 1-5 are merged to `main` (PR #1) and deployed. Tasks 6-7 live on branch `seo_improve` (pushed through `a54b834`).
+Tasks 1-5 are merged to `main` (PR #1) and deployed. Tasks 6-7 live on branch `seo_improve` (pushed).
 
 Do the tasks in order.
 
@@ -38,13 +38,16 @@ Do the tasks in order.
 - Findings were partially stale: OG/Twitter cards, canonicals, robots.txt, sitemap.xml, and JSON-LD (SoftwareApplication + FAQPage) already exist on `main` (commit `0a87c5e`). Verified before adding anything.
 - **Kilo's implementation commit landed and pushed: `a54b834` "SEO: schema, favicon, publisher line"** on `seo_improve` — SoftwareApplication schema refresh (BusinessApplication category, publisher, trimmed description), publisher line in footer, favicon verification. He did NOT touch llms.txt, pricing.md, WebPage schema, or dateModified, as agreed.
 - Kilo reviewed the existing FAQPage JSON-LD for exact text match with visible FAQ copy (kept in sync by Task 7) instead of adding a second block.
-- Open: llms.txt approach (research done, decision pending with human); /pricing.md not pursued (real page is /download); GSC/Bing sitemap submission is an external account-level step.
+- **llms.txt: deferred / not implemented** — explicitly excluded from the scoped SEO task (Kilo + human decision). Recommendation remains from the broader audit if wanted later.
+- **GSC + Bing: sitemap.xml submitted** to Google Search Console and Bing Webmaster Tools (both processing; expected Success in 24-48h).
+- Publisher footer line: Kilo's original edit ("Built by [YOUR NAME], SoupApps") was accidentally lost during the Task 7 commit separation (backup/restore only restored the schema hunk). Re-added by OpenCode as **"Built by SoupApps"** (placeholder dropped per human choice) — committed after `a54b834`.
+- Explicitly out of scope (per Kilo): pricing.md, WebPage schema, datePublished/dateModified, new pages, tracking scripts. Title, meta description, OG, Twitter Card, canonicals left untouched.
 
 ### Acceptance
 
 - [x] SEO/AEO/GEO audit completed on the live site (Kilo).
-- [ ] llms.txt in place for the live site.
-- [x] Findings applied: schema + publisher line + favicon in commit `a54b834` (llms.txt tracked by its own acceptance box; GSC/Bing submission is external).
+- [x] llms.txt: **deferred / not implemented** — excluded from the scoped SEO task by decision (recommendation preserved for a future task).
+- [x] Findings applied: schema + publisher line + favicon in commit `a54b834`; publisher footer line re-added as "Built by SoupApps"; sitemap submitted to GSC + Bing (external, processing).
 
 ## Task 7 — Mac/Linux interest form links (completed)
 
